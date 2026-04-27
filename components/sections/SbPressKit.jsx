@@ -1,17 +1,15 @@
 "use client";
 
-import { storyblokEditable, renderRichText } from "@storyblok/react/rsc";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { Download, Quote } from "lucide-react";
 
 export default function SbPressKit({ blok }) {
   const { heading, bio_text, quotes, downloadables, band_photos } = blok;
-  const bioHtml = bio_text ? renderRichText(bio_text) : null;
+  const bioHtml = null;
 
   return (
     <section
-      {...storyblokEditable(blok)}
       className="py-20 lg:py-32"
       aria-label="Press kit"
     >

@@ -1,6 +1,5 @@
 "use client";
 
-import { storyblokEditable } from "@storyblok/react/rsc";
 import { motion } from "framer-motion";
 
 const PLATFORM_HEIGHTS = {
@@ -17,7 +16,6 @@ export default function SbMusicEmbed({ blok }) {
 
   return (
     <section
-      {...storyblokEditable(blok)}
       className="py-12"
       aria-label={`${platform ?? "Music"} embed`}
     >

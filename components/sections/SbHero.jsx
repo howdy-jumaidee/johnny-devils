@@ -83,8 +83,8 @@ export default function SbHero({ blok }) {
           <Button href={cta_href ?? "/music"} size="lg">
             {cta_label ?? "Listen Now"}
           </Button>
-          <Button href="/tour" variant="ghost" size="lg">
-            Tour Dates
+          <Button href="/shows" variant="ghost" size="lg">
+            Upcoming Shows
           </Button>
         </motion.div>
       </div>

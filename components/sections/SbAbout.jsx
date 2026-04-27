@@ -1,6 +1,5 @@
 "use client";
 
-import { storyblokEditable, renderRichText } from "@storyblok/react/rsc";
 import Image from "next/image";
 import { motion } from "framer-motion";
 
@@ -11,11 +10,10 @@ const fadeUp = {
 
 export default function SbAbout({ blok }) {
   const { heading, body_text, band_photo, members } = blok;
-  const bodyHtml = body_text ? renderRichText(body_text) : null;
+  const bodyHtml = null;
 
   return (
     <section
-      {...storyblokEditable(blok)}
       className="py-20 lg:py-32"
       aria-label="About the band"
     >

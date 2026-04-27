@@ -6,14 +6,11 @@ import { usePathname } from "next/navigation";
 import MobileMenu from "./MobileMenu";
 
 const NAV_LINKS = [
-  { label: "About", href: "/about" },
-  { label: "Music", href: "/music" },
-  { label: "Discography", href: "/discography" },
-  { label: "Tour", href: "/tour" },
-  { label: "Gallery", href: "/gallery" },
-  { label: "Merch", href: "/merch" },
-  { label: "Press", href: "/press" },
-  { label: "Contact", href: "/contact" },
+  { label: "About",  href: "/about" },
+  { label: "Music",  href: "/music" },
+  { label: "Shows",  href: "/shows" },
+  { label: "Merch",  href: "/merch" },
+  { label: "Press",  href: "/press" },
 ];
 
 export default function Navbar() {

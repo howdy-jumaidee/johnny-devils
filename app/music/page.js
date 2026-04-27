@@ -1,6 +1,5 @@
-import { fetchStory } from "@/lib/storyblok";
-import { StoryblokServerComponent } from "@storyblok/react/rsc";
 import SbMusicEmbed from "@/components/sections/SbMusicEmbed";
+import { MUSIC_EMBEDS } from "@/lib/content";
 
 export const metadata = {
   title: "Music",
@@ -8,27 +7,7 @@ export const metadata = {
     "Stream Johnny Devils on Spotify, YouTube, and SoundCloud. Listen to all albums, EPs, and singles.",
 };
 
-const FALLBACK_EMBEDS = [
-  {
-    _uid: "me1",
-    component: "music_embed",
-    heading: "Hellfire & Honey — Full Album",
-    platform: "spotify",
-    embed_url:
-      "https://open.spotify.com/embed/album/placeholder?utm_source=generator&theme=0",
-  },
-  {
-    _uid: "me2",
-    component: "music_embed",
-    heading: "Live at The Roxy — Full Set",
-    platform: "youtube",
-    embed_url: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-  },
-];
-
-export default async function MusicPage() {
-  const story = await fetchStory("music").catch(() => null);
-
+export default function MusicPage() {
   return (
     <div className="pt-28 pb-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-16">
@@ -41,17 +20,11 @@ export default async function MusicPage() {
         <hr className="divider-amber mt-6 max-w-xs" />
       </div>
 
-      {story ? (
-        story.content.body?.map((blok) => (
-          <StoryblokServerComponent blok={blok} key={blok._uid} />
-        ))
-      ) : (
-        <div className="flex flex-col gap-12">
-          {FALLBACK_EMBEDS.map((blok) => (
-            <SbMusicEmbed blok={blok} key={blok._uid} />
-          ))}
-        </div>
-      )}
+      <div className="flex flex-col gap-12">
+        {MUSIC_EMBEDS.map((blok) => (
+          <SbMusicEmbed blok={blok} key={blok._uid} />
+        ))}
+      </div>
     </div>
   );
 }

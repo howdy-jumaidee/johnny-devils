@@ -10,10 +10,8 @@ const SOCIAL_LINKS = [
 
 const FOOTER_LINKS = [
   { label: "About", href: "/about" },
-  { label: "Discography", href: "/discography" },
-  { label: "Tour", href: "/tour" },
+  { label: "Shows", href: "/shows" },
   { label: "Music", href: "/music" },
-  { label: "Gallery", href: "/gallery" },
   { label: "Merch", href: "/merch" },
   { label: "Press", href: "/press" },
   { label: "Contact", href: "/contact" },
@@ -94,10 +92,10 @@ export default function Footer() {
           <p className="text-brand-muted text-xs">
             Booking inquiries:{" "}
             <a
-              href="mailto:booking@johnnydevils.com"
+              href="mailto:my@jubel.se"
               className="text-brand-amber hover:text-brand-black transition-colors duration-200"
             >
-              booking@johnnydevils.com
+              my@jubel.se
             </a>
           </p>
         </div>

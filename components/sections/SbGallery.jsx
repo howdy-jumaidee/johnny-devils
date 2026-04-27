@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import { storyblokEditable } from "@storyblok/react/rsc";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import Lightbox from "yet-another-react-lightbox";
@@ -23,7 +22,6 @@ export default function SbGallery({ blok }) {
 
   return (
     <section
-      {...storyblokEditable(blok)}
       className="py-20 lg:py-32"
       aria-label="Photo gallery"
     >

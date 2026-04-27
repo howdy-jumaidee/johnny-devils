@@ -32,7 +32,7 @@ export async function POST(request) {
     return NextResponse.json({ error: "Invalid email address." }, { status: 422 });
   }
 
-  const toEmail = process.env.EMAIL_TO ?? "booking@johnnydevils.com";
+  const toEmail = process.env.EMAIL_TO ?? "my@jubel.se";
   const resend = new Resend(process.env.RESEND_API_KEY);
 
   try {

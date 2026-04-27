@@ -1,24 +1,25 @@
-import { fetchStory, fetchStories } from "@/lib/storyblok";
-import { StoryblokServerComponent } from "@storyblok/react/rsc";
 import SbRelease from "@/components/sections/SbRelease";
 import Button from "@/components/ui/Button";
+import { RELEASES } from "@/lib/content";
 import { ArrowLeft } from "lucide-react";
+import { notFound } from "next/navigation";
 
-export async function generateStaticParams() {
-  const stories = await fetchStories("releases/").catch(() => []);
-  return stories.map((s) => ({ slug: s.slug }));
+export function generateStaticParams() {
+  return RELEASES.map((r) => ({ slug: r.slug }));
 }
 
-export async function generateMetadata({ params }) {
-  const story = await fetchStory(`releases/${params.slug}`).catch(() => null);
+export function generateMetadata({ params }) {
+  const release = RELEASES.find((r) => r.slug === params.slug);
+  if (!release) return { title: "Release Not Found" };
   return {
-    title: story?.content?.title ?? "Release",
-    description: `${story?.content?.title ?? "Release"} by Johnny Devils`,
+    title: release.title,
+    description: `${release.title} by Johnny Devils`,
   };
 }
 
-export default async function ReleasePage({ params }) {
-  const story = await fetchStory(`releases/${params.slug}`).catch(() => null);
+export default function ReleasePage({ params }) {
+  const release = RELEASES.find((r) => r.slug === params.slug);
+  if (!release) notFound();
 
   return (
     <div className="pt-32 pb-20">
@@ -28,16 +29,9 @@ export default async function ReleasePage({ params }) {
           Back to Discography
         </Button>
       </div>
-
-      {story ? (
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <SbRelease blok={story.content} />
-        </div>
-      ) : (
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center py-20">
-          <p className="text-brand-muted text-lg">Release not found.</p>
-        </div>
-      )}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <SbRelease blok={release} />
+      </div>
     </div>
   );
 }

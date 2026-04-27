@@ -1,6 +1,4 @@
 import { Barlow } from "next/font/google";
-import { storyblokInit, apiPlugin } from "@storyblok/react/rsc";
-import components from "@/storyblok/components";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import "./globals.css";
@@ -11,14 +9,6 @@ const barlow = Barlow({
   weight: ["400", "500", "600", "700"],
   variable: "--font-barlow",
   display: "swap",
-});
-
-/* ─── Storyblok Init ────────────────────────────────────────────────────────── */
-storyblokInit({
-  accessToken: process.env.NEXT_PUBLIC_STORYBLOK_TOKEN,
-  use: [apiPlugin],
-  components,
-  bridge: true,
 });
 
 /* ─── Root Metadata ─────────────────────────────────────────────────────────── */

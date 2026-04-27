@@ -1,6 +1,5 @@
 "use client";
 
-import { storyblokEditable } from "@storyblok/react/rsc";
 import Image from "next/image";
 import { ExternalLink, Music } from "lucide-react";
 import Button from "@/components/ui/Button";
@@ -34,7 +33,6 @@ export default function SbRelease({ blok }) {
 
   return (
     <article
-      {...storyblokEditable(blok)}
       className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-start"
     >
       {/* Cover */}

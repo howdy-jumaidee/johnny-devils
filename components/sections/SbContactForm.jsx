@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import { storyblokEditable } from "@storyblok/react/rsc";
 import { motion } from "framer-motion";
 import { Send, CheckCircle, AlertCircle } from "lucide-react";
 import Button from "@/components/ui/Button";
@@ -50,7 +49,6 @@ export default function SbContactForm({ blok }) {
 
   return (
     <section
-      {...storyblokEditable(blok)}
       className="py-20 lg:py-32"
       aria-label="Contact form"
     >
@@ -88,10 +86,10 @@ export default function SbContactForm({ blok }) {
               We&apos;ll get back to you as soon as possible. If it&apos;s
               urgent, reach us at{" "}
               <a
-                href={`mailto:${booking_email ?? "booking@johnnydevils.com"}`}
+                href={`mailto:${booking_email ?? "my@jubel.se"}`}
                 className="text-brand-amber hover:underline"
               >
-                {booking_email ?? "booking@johnnydevils.com"}
+                {booking_email ?? "my@jubel.se"}
               </a>
               .
             </p>

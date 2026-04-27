@@ -1,6 +1,5 @@
 "use client";
 
-import { storyblokEditable } from "@storyblok/react/rsc";
 import { motion } from "framer-motion";
 import ReleaseCard from "@/components/ui/ReleaseCard";
 
@@ -9,7 +8,6 @@ export default function SbDiscography({ blok }) {
 
   return (
     <section
-      {...storyblokEditable(blok)}
       className="py-20 lg:py-32"
       aria-label="Discography"
     >

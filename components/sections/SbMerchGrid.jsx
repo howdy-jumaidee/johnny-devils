@@ -1,6 +1,5 @@
 "use client";
 
-import { storyblokEditable } from "@storyblok/react/rsc";
 import { motion } from "framer-motion";
 import MerchCard from "@/components/ui/MerchCard";
 
@@ -9,7 +8,6 @@ export default function SbMerchGrid({ blok }) {
 
   return (
     <section
-      {...storyblokEditable(blok)}
       className="py-20 lg:py-32"
       aria-label="Merchandise"
     >

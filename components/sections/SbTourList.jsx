@@ -1,6 +1,5 @@
 "use client";
 
-import { storyblokEditable } from "@storyblok/react/rsc";
 import { motion } from "framer-motion";
 import TourRow from "@/components/ui/TourRow";
 
@@ -17,7 +16,6 @@ export default function SbTourList({ blok }) {
 
   return (
     <section
-      {...storyblokEditable(blok)}
       className="py-20 lg:py-32"
       aria-label="Tour dates"
     >

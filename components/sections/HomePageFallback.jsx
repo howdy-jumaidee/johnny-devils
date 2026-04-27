@@ -19,7 +19,7 @@ const TEASERS = [
     label: "Next Show",
     title: "The Roxy, L.A.",
     sub: "June 14, 2026",
-    href: "/tour",
+    href: "/shows",
     cta: "Get Tickets",
   },
   {
@@ -95,10 +95,10 @@ export default function HomePageFallback() {
                 Listen Now
               </Button>
               <Link
-                href="/tour"
+                href="/shows"
                 className="relative group label-accent text-brand-cream/50 text-xs tracking-widest hover:text-brand-cream transition-colors duration-200 py-2"
               >
-                Tour Dates
+                Upcoming Shows
                 <span className="absolute bottom-0 left-0 right-0 h-px bg-brand-amber scale-x-0 group-hover:scale-x-100 transition-transform duration-200 origin-left" />
               </Link>
             </motion.div>
