@@ -6,11 +6,11 @@ import { usePathname } from "next/navigation";
 import MobileMenu from "./MobileMenu";
 
 const NAV_LINKS = [
-  { label: "About",  href: "/about" },
   { label: "Music",  href: "/music" },
   { label: "Shows",  href: "/shows" },
   { label: "Merch",  href: "/merch" },
   { label: "Press",  href: "/press" },
+  { label: "About",  href: "/about" },
 ];
 
 export default function Navbar() {

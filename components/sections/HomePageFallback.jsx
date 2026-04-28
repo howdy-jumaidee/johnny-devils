@@ -3,34 +3,7 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
 import Button from "@/components/ui/Button";
-import { Calendar, Music, ShoppingBag, ArrowRight } from "lucide-react";
-
-const TEASERS = [
-  {
-    icon: Music,
-    label: "Latest Release",
-    title: "Hellfire & Honey",
-    sub: "New album — out now",
-    href: "/discography",
-    cta: "Listen",
-  },
-  {
-    icon: Calendar,
-    label: "Next Show",
-    title: "The Roxy, L.A.",
-    sub: "June 14, 2026",
-    href: "/shows",
-    cta: "Get Tickets",
-  },
-  {
-    icon: ShoppingBag,
-    label: "New in Merch",
-    title: "Hellfire Tour Tee",
-    sub: "Limited run — grab yours",
-    href: "/merch",
-    cta: "Shop Now",
-  },
-];
+import { ArrowRight } from "lucide-react";
 
 export default function HomePageFallback() {
   return (
@@ -102,42 +75,6 @@ export default function HomePageFallback() {
                 <span className="absolute bottom-0 left-0 right-0 h-px bg-brand-amber scale-x-0 group-hover:scale-x-100 transition-transform duration-200 origin-left" />
               </Link>
             </motion.div>
-          </div>
-        </div>
-      </section>
-
-      {/* ── Teasers ──────────────────────────────────────────────────────── */}
-      <section className="py-20 lg:py-28" aria-label="Quick links">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {TEASERS.map(({ icon: Icon, label, title, sub, href, cta }, i) => (
-              <motion.div
-                key={label}
-                initial={{ opacity: 0, y: 24 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: i * 0.1 }}
-                className="bg-brand-smoke p-8 lg:p-10 flex flex-col gap-5 group hover:bg-brand-smoke/80 transition-colors duration-200"
-              >
-                <Icon size={28} className="text-brand-amber" />
-                <div>
-                  <p className="label-accent text-brand-muted text-xs tracking-widest mb-2">
-                    {label}
-                  </p>
-                  <h3 className="heading-serif text-brand-black text-2xl mb-1">
-                    {title}
-                  </h3>
-                  <p className="text-brand-black/50 text-sm">{sub}</p>
-                </div>
-                <Link
-                  href={href}
-                  className="inline-flex items-center gap-2 label-accent text-brand-amber text-xs tracking-widest hover:gap-3 transition-all duration-200 mt-auto"
-                >
-                  {cta}
-                  <ArrowRight size={13} />
-                </Link>
-              </motion.div>
-            ))}
           </div>
         </div>
       </section>
