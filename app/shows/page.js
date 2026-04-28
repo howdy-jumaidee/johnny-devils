@@ -2,19 +2,19 @@ import SbTourList from "@/components/sections/SbTourList";
 import { TOUR_DATES } from "@/lib/content";
 
 export const metadata = {
-  title: "Tour Dates",
+  title: "Shows",
   description:
-    "Johnny Devils live tour dates and concert schedule. Find a show near you and grab tickets before they sell out.",
+    "Johnny Devils live shows and concert schedule. Find a show near you and grab tickets before they sell out.",
 };
 
-export default function TourPage() {
+export default function ShowsPage() {
   return (
     <div className="pt-20">
       <SbTourList
         blok={{
-          _uid: "tour",
+          _uid: "shows",
           component: "tour_list",
-          heading: "Tour Dates",
+          heading: "Shows",
           dates: TOUR_DATES,
         }}
       />
