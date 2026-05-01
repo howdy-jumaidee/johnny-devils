@@ -31,15 +31,6 @@ export default function HomePageFallback() {
         {/* Content — bottom left */}
         <div className="absolute bottom-0 left-0 right-0 z-10">
           <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 pb-14 lg:pb-20">
-            <motion.p
-              initial={{ opacity: 0, y: 12 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.1 }}
-              className="label-accent text-brand-amber text-xs tracking-widest mb-3"
-            >
-              Johnny Devils
-            </motion.p>
-
             <motion.h1
               initial={{ opacity: 0, y: 16 }}
               animate={{ opacity: 1, y: 0 }}
