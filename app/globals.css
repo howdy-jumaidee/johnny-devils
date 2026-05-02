@@ -98,9 +98,8 @@ body {
 }
 
 /* ─── Scrollbar ────────────────────────────────────────────────────────────── */
-::-webkit-scrollbar { width: 6px; }
-::-webkit-scrollbar-track { background: #F9F8F2; }
-::-webkit-scrollbar-thumb { background: #DA4143; border-radius: 3px; }
+::-webkit-scrollbar { display: none; }
+html { scrollbar-width: none; }
 
 /* ─── Focus Ring ───────────────────────────────────────────────────────────── */
 :focus-visible {
