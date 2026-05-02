@@ -1,19 +1,11 @@
+import Image from "next/image";
 import Link from "next/link";
-import { Camera, Globe, Play, X } from "lucide-react";
-
-const SOCIAL_LINKS = [
-  { label: "Instagram", href: "#", Icon: Camera },
-  { label: "Facebook", href: "#", Icon: Globe },
-  { label: "YouTube", href: "#", Icon: Play },
-  { label: "Twitter / X", href: "#", Icon: X },
-];
 
 const FOOTER_LINKS = [
   { label: "About", href: "/about" },
   { label: "Shows", href: "/shows" },
   { label: "Music", href: "/music" },
   { label: "Merch", href: "/merch" },
-  { label: "Press", href: "/press" },
   { label: "Contact", href: "/contact" },
 ];
 
@@ -25,26 +17,18 @@ export default function Footer() {
 
           {/* Brand */}
           <div className="flex flex-col gap-4">
-            <Link href="/" className="group w-fit">
+            <Link href="/" className="group w-fit outline-none">
               <span className="label-accent text-brand-amber text-lg tracking-widest group-hover:text-brand-black transition-colors duration-200">
                 Johnny Devils
               </span>
             </Link>
-            {/* Social Icons */}
-            <div className="flex items-center gap-3 mt-2">
-              {SOCIAL_LINKS.map(({ label, href, Icon }) => (
-                <a
-                  key={label}
-                  href={href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label={label}
-                  className="p-2 border border-brand-amber/30 text-brand-muted hover:text-brand-amber hover:border-brand-amber transition-all duration-200"
-                >
-                  <Icon size={16} />
-                </a>
-              ))}
-            </div>
+            <Image
+              src="/horseshoe.png"
+              alt="Good luck horseshoe"
+              width={72}
+              height={72}
+              className="object-contain"
+            />
           </div>
 
           {/* Nav */}
@@ -72,8 +56,7 @@ export default function Footer() {
               Stay in the loop
             </p>
             <p className="text-brand-muted text-sm mb-4 leading-relaxed">
-              New releases, tour announcements, and backstage access — straight
-              to your inbox.
+              New releases &amp; show dates straight to your inbox.
             </p>
             <Link
               href="/contact"

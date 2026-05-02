@@ -48,7 +48,7 @@ export default function Navbar() {
           {/* Logo */}
           <Link
             href="/"
-            className="group"
+            className="group outline-none"
             aria-label="Johnny Devils — Home"
           >
             <span className={`label-accent text-brand-amber text-xl tracking-widest transition-colors duration-200 ${isLight ? "group-hover:text-brand-black" : "group-hover:text-brand-cream"}`}>
@@ -84,18 +84,33 @@ export default function Navbar() {
             })}
           </ul>
 
-          {/* CTA — desktop */}
-          <Link
-            href="/contact"
-            className={`hidden lg:inline-flex items-center px-5 py-2 border text-sm font-medium label-accent tracking-widest transition-all duration-200 ${
-              isLight
-                ? "border-brand-black text-brand-black hover:bg-brand-black hover:text-brand-cream"
-                : "border-brand-cream text-brand-cream hover:bg-brand-cream hover:text-brand-black"
-            }`}
-            aria-label="Booking inquiry"
-          >
-            Book Us
-          </Link>
+          {/* Instagram + CTA — desktop */}
+          <div className="hidden lg:flex items-center gap-4">
+            <a
+              href="https://www.instagram.com/johnnydevilsband/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Instagram"
+              className={`transition-colors duration-200 ${isLight ? "text-brand-black/60 hover:text-brand-amber" : "text-brand-cream/70 hover:text-brand-amber"}`}
+            >
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                <circle cx="12" cy="12" r="4.5"/>
+                <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/>
+              </svg>
+            </a>
+            <Link
+              href="/contact"
+              className={`inline-flex items-center px-5 py-2 border text-sm font-medium label-accent tracking-widest transition-all duration-200 ${
+                isLight
+                  ? "border-brand-black text-brand-black hover:bg-brand-black hover:text-brand-cream"
+                  : "border-brand-cream text-brand-cream hover:bg-brand-cream hover:text-brand-black"
+              }`}
+              aria-label="Booking inquiry"
+            >
+              Book Us
+            </Link>
+          </div>
 
           {/* Hamburger — mobile */}
           <button
