@@ -1,14 +1,14 @@
 import { ExternalLink, MapPin } from "lucide-react";
 
-export default function TourRow({ date, venue, city, country, ticket_url, sold_out, past = false }) {
-  const formatted = date
+export default function TourRow({ date, date_display, venue, city, country, ticket_url, tickets_pending, sold_out, past = false }) {
+  const formatted = date_display ?? (date
     ? new Date(date).toLocaleDateString("en-US", {
         weekday: "short",
         month: "short",
         day: "numeric",
         year: "numeric",
       })
-    : "TBA";
+    : "TBA");
 
   return (
     <article
@@ -57,11 +57,15 @@ export default function TourRow({ date, venue, city, country, ticket_url, sold_o
             Tickets
             <ExternalLink size={11} />
           </a>
-        ) : (
-          <span className="label-accent text-xs text-brand-muted tracking-widest">
-            Free Entry
+        ) : tickets_pending ? (
+          <span
+            className="inline-flex items-center gap-1.5 px-4 py-2 border border-brand-muted/30 text-brand-muted label-accent text-xs tracking-widest cursor-not-allowed"
+            aria-disabled="true"
+          >
+            Tickets
+            <ExternalLink size={11} />
           </span>
-        )}
+        ) : null}
       </div>
     </article>
   );

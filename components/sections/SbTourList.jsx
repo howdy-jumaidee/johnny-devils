@@ -49,10 +49,12 @@ export default function SbTourList({ blok }) {
               >
                 <TourRow
                   date={date.date}
+                  date_display={date.date_display}
                   venue={date.venue}
                   city={date.city}
                   country={date.country}
                   ticket_url={date.ticket_url}
+                  tickets_pending={date.tickets_pending}
                   sold_out={date.sold_out}
                 />
               </motion.div>
@@ -82,10 +84,12 @@ export default function SbTourList({ blok }) {
                 <TourRow
                   key={date._uid ?? i}
                   date={date.date}
+                  date_display={date.date_display}
                   venue={date.venue}
                   city={date.city}
                   country={date.country}
                   ticket_url={date.ticket_url}
+                  tickets_pending={date.tickets_pending}
                   sold_out={date.sold_out}
                   past
                 />
