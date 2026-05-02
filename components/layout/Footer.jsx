@@ -6,6 +6,7 @@ const FOOTER_LINKS = [
   { label: "Shows", href: "/shows" },
   { label: "Music", href: "/music" },
   { label: "Merch", href: "/merch" },
+  { label: "Instagram", href: "https://www.instagram.com/johnnydevilsband/", external: true },
   { label: "Contact", href: "/contact" },
 ];
 
@@ -16,8 +17,8 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
 
           {/* Brand */}
-          <div className="flex flex-col gap-4">
-            <Link href="/" className="group w-fit outline-none">
+          <div className="flex flex-col items-center gap-4">
+            <Link href="/" className="group outline-none">
               <span className="label-accent text-brand-amber text-lg tracking-widest group-hover:text-brand-black transition-colors duration-200">
                 Johnny Devils
               </span>
@@ -39,12 +40,23 @@ export default function Footer() {
             <ul className="grid grid-cols-2 gap-x-6 gap-y-2" role="list">
               {FOOTER_LINKS.map((link) => (
                 <li key={link.href}>
-                  <Link
-                    href={link.href}
-                    className="text-brand-muted text-sm hover:text-brand-black transition-colors duration-200"
-                  >
-                    {link.label}
-                  </Link>
+                  {link.external ? (
+                    <a
+                      href={link.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-brand-muted text-sm hover:text-brand-black transition-colors duration-200"
+                    >
+                      {link.label}
+                    </a>
+                  ) : (
+                    <Link
+                      href={link.href}
+                      className="text-brand-muted text-sm hover:text-brand-black transition-colors duration-200"
+                    >
+                      {link.label}
+                    </Link>
+                  )}
                 </li>
               ))}
             </ul>

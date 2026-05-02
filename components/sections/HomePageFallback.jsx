@@ -84,13 +84,13 @@ export default function HomePageFallback() {
               The Band
             </p>
             <h2 className="heading-display text-brand-black text-4xl sm:text-5xl mb-6">
-              Cold Winter &apos;24
+              Who&apos;s Johnny?
             </h2>
             <p className="text-brand-black/70 text-lg leading-relaxed mb-4">
               Johnny Devils took shape on a winter evening in February 2024. A
               shared love of country and 1960s rock set the tone early, and what
               began as rehearsals in a living room in Nacka grew into something
-              more — a sound rooted in classic songcraft but alive with nerve,
+              more, a sound rooted in classic songcraft but alive with nerve,
               groove, and darkness.
             </p>
             <p className="text-brand-black/75 leading-relaxed mb-8">
