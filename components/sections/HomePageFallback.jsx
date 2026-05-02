@@ -11,7 +11,7 @@ export default function HomePageFallback() {
     <>
       {/* ── Hero ─────────────────────────────────────────────────────────── */}
       <section
-        className="relative min-h-screen overflow-hidden bg-brand-black"
+        className="sticky top-0 z-0 min-h-screen overflow-hidden bg-brand-black"
         aria-label="Hero"
       >
         {/* Background video */}
@@ -77,7 +77,7 @@ export default function HomePageFallback() {
       </section>
 
       {/* ── About Snippet ─────────────────────────────────────────────────── */}
-      <section className="py-20 lg:py-28 border-t border-brand-amber/10" aria-label="About">
+      <section className="relative z-10 py-20 lg:py-28 border-t border-brand-amber/10 bg-white" aria-label="About">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <motion.div
             initial={{ opacity: 0, x: -24 }}
