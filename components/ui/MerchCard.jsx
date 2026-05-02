@@ -15,6 +15,7 @@ export default function MerchCard({ name, image, price, external_url, cta_label,
             className={`object-cover transition-transform duration-500 ${
               sold_out ? "grayscale opacity-60" : "group-hover:scale-105"
             }`}
+            style={image.position ? { objectPosition: image.position } : undefined}
           />
         ) : (
           <div className="absolute inset-0 flex items-center justify-center">
