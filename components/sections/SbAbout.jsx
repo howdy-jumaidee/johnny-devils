@@ -77,7 +77,7 @@ export default function SbAbout({ blok }) {
             <p className="label-accent text-brand-amber text-xs tracking-widest mb-10">
               The Members
             </p>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8">
               {members.map((member, i) => (
                 <motion.article
                   key={member._uid ?? i}
