@@ -18,12 +18,9 @@ export default function Footer() {
 
           {/* Brand */}
           <div className="flex flex-col items-start gap-4">
-            <Link href="/" className="group outline-none flex flex-col leading-tight">
+            <Link href="/" className="group outline-none">
               <span className="label-accent text-brand-amber text-lg tracking-widest group-hover:text-brand-black transition-colors duration-200">
-                Johnny
-              </span>
-              <span className="label-accent text-brand-amber text-lg tracking-widest group-hover:text-brand-black transition-colors duration-200">
-                Devils
+                Johnny Devils
               </span>
             </Link>
             <Image
