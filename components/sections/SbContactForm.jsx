@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import { Send, CheckCircle, AlertCircle } from "lucide-react";
 import Button from "@/components/ui/Button";
 
-const SUBJECTS = ["Booking", "Press", "General"];
+const SUBJECTS = ["Booking", "Press", "Other"];
 
 export default function SbContactForm({ blok }) {
   const { heading, subtext, booking_email } = blok;
@@ -13,7 +13,7 @@ export default function SbContactForm({ blok }) {
   const [fields, setFields] = useState({
     name: "",
     email: "",
-    subject: "General",
+    subject: "Booking",
     message: "",
   });
   const [status, setStatus] = useState("idle"); // idle | loading | success | error
@@ -102,7 +102,7 @@ export default function SbContactForm({ blok }) {
                 htmlFor="name"
                 className="block label-accent text-brand-muted text-xs tracking-widest mb-2"
               >
-                Name *
+                Name
               </label>
               <input
                 id="name"
@@ -111,7 +111,7 @@ export default function SbContactForm({ blok }) {
                 required
                 value={fields.name}
                 onChange={handleChange}
-                placeholder="Your full name"
+                placeholder="Your name"
                 className="w-full bg-brand-smoke border border-brand-amber/20 text-brand-black placeholder:text-brand-muted/40 px-4 py-3 text-sm focus:outline-none focus:border-brand-amber transition-colors duration-200"
               />
             </div>
@@ -122,7 +122,7 @@ export default function SbContactForm({ blok }) {
                 htmlFor="email"
                 className="block label-accent text-brand-muted text-xs tracking-widest mb-2"
               >
-                Email *
+                Email
               </label>
               <input
                 id="email"
@@ -142,7 +142,7 @@ export default function SbContactForm({ blok }) {
                 htmlFor="subject"
                 className="block label-accent text-brand-muted text-xs tracking-widest mb-2"
               >
-                Subject *
+                Subject
               </label>
               <select
                 id="subject"
@@ -166,7 +166,7 @@ export default function SbContactForm({ blok }) {
                 htmlFor="message"
                 className="block label-accent text-brand-muted text-xs tracking-widest mb-2"
               >
-                Message *
+                Message
               </label>
               <textarea
                 id="message"
@@ -175,7 +175,7 @@ export default function SbContactForm({ blok }) {
                 rows={6}
                 value={fields.message}
                 onChange={handleChange}
-                placeholder="Tell us what's on your mind…"
+                placeholder="What's on your mind"
                 className="w-full bg-brand-smoke border border-brand-amber/20 text-brand-black placeholder:text-brand-muted/40 px-4 py-3 text-sm focus:outline-none focus:border-brand-amber transition-colors duration-200 resize-none"
               />
             </div>
