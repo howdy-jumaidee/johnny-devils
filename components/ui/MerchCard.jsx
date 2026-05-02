@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { ShoppingBag } from "lucide-react";
 
-export default function MerchCard({ name, image, price, external_url, sold_out }) {
+export default function MerchCard({ name, image, price, external_url, cta_label, sold_out }) {
   return (
     <article className="group bg-brand-smoke border border-brand-amber/20 hover:border-brand-amber/50 transition-all duration-200 flex flex-col">
       {/* Image */}
@@ -49,7 +49,7 @@ export default function MerchCard({ name, image, price, external_url, sold_out }
             rel="noopener noreferrer"
             className="mt-auto block w-full text-center py-2.5 border border-brand-amber text-brand-amber label-accent text-xs tracking-widest hover:bg-brand-amber hover:text-brand-black transition-all duration-200"
           >
-            Buy Now
+            {cta_label ?? "Buy Now"}
           </a>
         ) : (
           <span

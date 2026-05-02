@@ -43,6 +43,7 @@ export default function SbMerchGrid({ blok }) {
                   image={item.image}
                   price={item.price}
                   external_url={item.external_url}
+                  cta_label={item.cta_label}
                   sold_out={item.sold_out}
                 />
               </motion.div>
