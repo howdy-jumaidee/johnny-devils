@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 import Link from "next/link";
 import Button from "@/components/ui/Button";
 import { ArrowRight } from "lucide-react";
@@ -83,19 +84,21 @@ export default function HomePageFallback() {
               The Band
             </p>
             <h2 className="heading-display text-brand-black text-4xl sm:text-5xl mb-6">
-              Born in the smoke
+              Cold Winter &apos;24
             </h2>
             <p className="text-brand-black/70 text-lg leading-relaxed mb-4">
-              Johnny Devils came together in a back-alley rehearsal room in
-              Detroit in 1978. Four road-worn musicians united by one shared
-              obsession: the unvarnished truth of American blues, filtered
-              through the grit of heavy rock and the heat of Southern soul.
+              Johnny Devils took shape on a winter evening in February 2024. A
+              shared love of country and 1960s rock set the tone early, and what
+              began as rehearsals in a living room in Nacka grew into something
+              more — a sound rooted in classic songcraft but alive with nerve,
+              groove, and darkness.
             </p>
             <p className="text-brand-black/75 leading-relaxed mb-8">
-              Across six decades and eleven studio albums, they&apos;ve played
-              every dive bar and festival stage worth playing — from the Delta
-              to Dublin, from the Sunset Strip to São Paulo. The fire never went
-              out.
+              Their debut album Ground Rush arrived after two years of rehearsals
+              and live shows across Stockholm. A band that moves freely between
+              rock, country, and Americana, Johnny Devils build their music on
+              strong songs, raw presence, and a feel for the timeless over the
+              trendy.
             </p>
             <Button href="/about" variant="outlined">
               Full Story
@@ -108,13 +111,17 @@ export default function HomePageFallback() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.65 }}
-            className="relative aspect-[4/3] border border-brand-amber/20 bg-brand-smoke flex items-center justify-center"
+            className="relative aspect-[4/3] border border-brand-amber/20 overflow-hidden"
           >
-            <div className="absolute -top-3 -right-3 w-12 h-12 border-t-2 border-r-2 border-brand-amber/40" />
-            <div className="absolute -bottom-3 -left-3 w-12 h-12 border-b-2 border-l-2 border-brand-amber/40" />
-            <p className="label-accent text-brand-muted text-xs tracking-widest text-center px-8">
-              Band photo coming soon
-            </p>
+            <div className="absolute -top-3 -right-3 w-12 h-12 border-t-2 border-r-2 border-brand-amber/40 z-10" />
+            <div className="absolute -bottom-3 -left-3 w-12 h-12 border-b-2 border-l-2 border-brand-amber/40 z-10" />
+            <Image
+              src="/JD_bandphoto.png"
+              alt="Johnny Devils band photo"
+              fill
+              sizes="(max-width: 1024px) 100vw, 50vw"
+              className="object-cover"
+            />
           </motion.div>
         </div>
       </section>
