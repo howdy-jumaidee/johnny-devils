@@ -25,21 +25,26 @@ export default function HomePageFallback() {
           aria-hidden="true"
         />
         {/* Dark overlay so text is legible */}
-        <div className="absolute inset-0 bg-brand-black/40 pointer-events-none" aria-hidden="true" />
+        <div className="absolute inset-0 bg-brand-black/20 pointer-events-none" aria-hidden="true" />
         {/* Bottom fade */}
         <div className="absolute inset-0 bg-gradient-to-t from-brand-black/60 via-transparent to-transparent pointer-events-none" aria-hidden="true" />
 
         {/* Content — bottom left */}
         <div className="absolute bottom-0 left-0 right-0 z-10">
           <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 pb-14 lg:pb-20">
-            <motion.h1
+            <h1 className="sr-only">
+              Johnny Devils — Rock & Americana Band from Stockholm
+            </h1>
+
+            <motion.h2
               initial={{ opacity: 0, y: 16 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
               className="heading-display text-brand-cream text-[4.5rem] leading-none mb-1"
+              aria-hidden="true"
             >
               Ground Rush
-            </motion.h1>
+            </motion.h2>
 
             <motion.p
               initial={{ opacity: 0, y: 12 }}
