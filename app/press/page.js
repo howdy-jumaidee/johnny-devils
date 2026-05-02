@@ -1,3 +1,4 @@
+import { redirect } from "next/navigation";
 import SbPressKit from "@/components/sections/SbPressKit";
 import { PRESS_QUOTES, PRESS_DOWNLOADS } from "@/lib/content";
 
@@ -8,6 +9,7 @@ export const metadata = {
 };
 
 export default function PressPage() {
+  redirect("/");  // remove this line to re-enable the press page
   return (
     <div className="pt-20">
       <SbPressKit

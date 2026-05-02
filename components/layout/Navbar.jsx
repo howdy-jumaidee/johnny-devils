@@ -9,7 +9,7 @@ const NAV_LINKS = [
   { label: "Music",  href: "/music" },
   { label: "Shows",  href: "/shows" },
   { label: "Merch",  href: "/merch" },
-  { label: "Press",  href: "/press" },
+  // { label: "Press",  href: "/press" },   // re-enable when press assets are ready
   { label: "About",  href: "/about" },
 ];
 
