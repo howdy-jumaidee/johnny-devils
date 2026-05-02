@@ -13,25 +13,70 @@ const barlow = Barlow({
 
 /* ─── Root Metadata ─────────────────────────────────────────────────────────── */
 export const metadata = {
+  metadataBase: new URL("https://johnnydevils.com"),
   title: {
     default: "Johnny Devils — Official Site",
     template: "%s | Johnny Devils",
   },
-  description:
-    "Official website for Johnny Devils. Raw blues. Burning soul. Vintage rock and roll born in the fire of the '70s.",
+  description: "Five-piece outlaw country from Stockholm. Ground Rush — out now.",
   openGraph: {
     type: "website",
     locale: "en_US",
+    url: "https://johnnydevils.com",
     siteName: "Johnny Devils",
+    images: [
+      {
+        url: "/JD_bandphoto.png",
+        width: 1200,
+        height: 630,
+        alt: "Johnny Devils band photo",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
+    images: ["/JD_bandphoto.png"],
   },
+};
+
+/* ─── JSON-LD Schema ────────────────────────────────────────────────────────── */
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "MusicGroup",
+  name: "Johnny Devils",
+  url: "https://johnnydevils.com",
+  genre: ["Rock", "Country", "Americana"],
+  foundingDate: "2024",
+  foundingLocation: {
+    "@type": "Place",
+    name: "Stockholm, Sweden",
+  },
+  member: [
+    { "@type": "OrganizationRole", member: { "@type": "Person", name: "Jumaidee Elias" }, roleName: "Lead Vocals & Rhythm Guitar" },
+    { "@type": "OrganizationRole", member: { "@type": "Person", name: "Erion Kapedani" }, roleName: "Lead Guitar & Vocals" },
+    { "@type": "OrganizationRole", member: { "@type": "Person", name: "Jack Gooderidge" }, roleName: "Bass Guitar & Backing Vocals" },
+    { "@type": "OrganizationRole", member: { "@type": "Person", name: "Jonathan Kull" }, roleName: "Trumpet & Backing Vocals" },
+    { "@type": "OrganizationRole", member: { "@type": "Person", name: "Jacob Tollet" }, roleName: "Drums & Backing Vocals" },
+  ],
+  album: {
+    "@type": "MusicAlbum",
+    name: "Ground Rush",
+    datePublished: "2024",
+  },
+  sameAs: [
+    "https://open.spotify.com/artist/7KaAcV1L15lnvGm4uY4RYy",
+  ],
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`${barlow.variable} h-full`}>
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+      </head>
       <body className="min-h-full flex flex-col bg-brand-cream text-brand-black antialiased">
         <Navbar />
         <main className="flex-1">{children}</main>

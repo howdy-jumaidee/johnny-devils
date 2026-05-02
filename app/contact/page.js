@@ -3,8 +3,6 @@ import { CONTACT } from "@/lib/content";
 
 export const metadata = {
   title: "Contact & Booking",
-  description:
-    "Book Johnny Devils for your venue or festival. Send a message for booking inquiries, press, and general questions.",
 };
 
 export default function ContactPage() {

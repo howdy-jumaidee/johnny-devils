@@ -3,8 +3,6 @@ import { MEMBERS, ABOUT } from "@/lib/content";
 
 export const metadata = {
   title: "About the Band",
-  description:
-    "The story of Johnny Devils — five musicians who came together in Nacka in 2024 and forged a sound rooted in country, rock, and Americana.",
 };
 
 export default function AboutPage() {

@@ -3,8 +3,6 @@ import { TOUR_DATES } from "@/lib/content";
 
 export const metadata = {
   title: "Shows",
-  description:
-    "Johnny Devils live shows and concert schedule. Find a show near you and grab tickets before they sell out.",
 };
 
 export default function ShowsPage() {

@@ -3,8 +3,6 @@ import { GALLERY_IMAGES } from "@/lib/content";
 
 export const metadata = {
   title: "Gallery",
-  description:
-    "Photos of Johnny Devils — live shots, backstage moments, and studio sessions across five decades.",
 };
 
 export default function GalleryPage() {

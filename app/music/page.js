@@ -3,8 +3,6 @@ import { MUSIC_EMBEDS } from "@/lib/content";
 
 export const metadata = {
   title: "Music",
-  description:
-    "Stream Johnny Devils on Spotify, YouTube, and SoundCloud. Listen to all albums, EPs, and singles.",
 };
 
 export default function MusicPage() {

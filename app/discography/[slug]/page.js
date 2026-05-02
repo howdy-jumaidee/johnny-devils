@@ -13,7 +13,6 @@ export function generateMetadata({ params }) {
   if (!release) return { title: "Release Not Found" };
   return {
     title: release.title,
-    description: `${release.title} by Johnny Devils`,
   };
 }
 

@@ -4,8 +4,6 @@ import { PRESS_QUOTES, PRESS_DOWNLOADS } from "@/lib/content";
 
 export const metadata = {
   title: "Press Kit",
-  description:
-    "Johnny Devils press kit — band bio, high-res photos, press quotes, and downloadable assets for media use.",
 };
 
 export default function PressPage() {

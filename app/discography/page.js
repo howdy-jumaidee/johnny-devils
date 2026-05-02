@@ -3,8 +3,6 @@ import { RELEASES } from "@/lib/content";
 
 export const metadata = {
   title: "Discography",
-  description:
-    "The full catalogue of Johnny Devils — eleven studio albums, EPs, and singles spanning five decades of blues rock.",
 };
 
 export default function DiscographyPage() {
