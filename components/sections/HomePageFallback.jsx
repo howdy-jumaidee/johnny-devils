@@ -31,7 +31,7 @@ export default function HomePageFallback() {
 
         {/* Content — bottom left */}
         <div className="absolute bottom-0 left-0 right-0 z-10">
-          <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 pb-14 lg:pb-20">
+          <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 pb-36 sm:pb-14 lg:pb-20">
             <h1 className="sr-only">
               Johnny Devils — Rock & Americana Band from Stockholm
             </h1>
