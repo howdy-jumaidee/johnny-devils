@@ -17,7 +17,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
 
           {/* Brand */}
-          <div className="flex flex-col items-center gap-4">
+          <div className="flex flex-col items-start gap-4">
             <Link href="/" className="group outline-none">
               <span className="label-accent text-brand-amber text-lg tracking-widest group-hover:text-brand-black transition-colors duration-200">
                 Johnny Devils
