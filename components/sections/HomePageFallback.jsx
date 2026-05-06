@@ -1,5 +1,6 @@
 "use client";
 
+import { useEffect } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
@@ -7,11 +8,15 @@ import Button from "@/components/ui/Button";
 import { ArrowRight } from "lucide-react";
 
 export default function HomePageFallback() {
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "instant" });
+  }, []);
+
   return (
     <>
       {/* ── Hero ─────────────────────────────────────────────────────────── */}
       <section
-        className="sticky top-0 z-0 h-dvh overflow-hidden bg-brand-black"
+        className="sticky top-0 z-0 min-h-screen overflow-hidden bg-brand-black"
         aria-label="Hero"
       >
         {/* Background video */}
