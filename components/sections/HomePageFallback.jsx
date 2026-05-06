@@ -11,7 +11,7 @@ export default function HomePageFallback() {
     <>
       {/* ── Hero ─────────────────────────────────────────────────────────── */}
       <section
-        className="sticky top-0 z-0 min-h-screen overflow-hidden bg-brand-black"
+        className="sticky top-0 z-0 h-dvh overflow-hidden bg-brand-black"
         aria-label="Hero"
       >
         {/* Background video */}
