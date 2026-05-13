@@ -72,6 +72,9 @@ const jsonLd = {
   },
   sameAs: [
     "https://open.spotify.com/artist/7KaAcV1L15lnvGm4uY4RYy",
+    "https://www.instagram.com/johnnydevilsband/",
+    "https://www.youtube.com/channel/UCf2zLkP5cuoC60hh4tC046g",
+    "https://music.apple.com/se/artist/johnny-devils/1817021600",
   ],
 };
 
