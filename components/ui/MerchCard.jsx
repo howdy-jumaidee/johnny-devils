@@ -43,11 +43,10 @@ export default function MerchCard({ name, image, price, external_url, cta_label,
           )}
         </div>
 
-        {external_url && !sold_out ? (
+        {external_url && external_url !== "#" && !sold_out ? (
           <a
             href={external_url}
-            target="_blank"
-            rel="noopener noreferrer"
+            {...(!external_url.startsWith("mailto:") && { target: "_blank", rel: "noopener noreferrer" })}
             className="mt-auto block w-full text-center py-2.5 border border-brand-amber text-brand-amber label-accent text-xs tracking-widest hover:bg-brand-amber hover:text-brand-black transition-all duration-200"
           >
             {cta_label ?? "Buy Now"}
