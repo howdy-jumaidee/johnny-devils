@@ -3,6 +3,14 @@ import { MUSIC_EMBEDS } from "@/lib/content";
 
 export const metadata = {
   title: "Music",
+  description:
+    "Stream Johnny Devils on Spotify and watch live performances on YouTube. Outlaw country and vintage rock from Stockholm.",
+  openGraph: {
+    title: "Music | Johnny Devils",
+    description:
+      "Stream Johnny Devils on Spotify and watch live performances on YouTube. Outlaw country and vintage rock from Stockholm.",
+    url: "https://johnnydevils.com/music",
+  },
 };
 
 export default function MusicPage() {

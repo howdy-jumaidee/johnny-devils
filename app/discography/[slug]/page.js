@@ -13,6 +13,12 @@ export function generateMetadata({ params }) {
   if (!release) return { title: "Release Not Found" };
   return {
     title: release.title,
+    description: release.description,
+    openGraph: {
+      title: `${release.title} | Johnny Devils`,
+      description: release.description,
+      url: `https://johnnydevils.com/discography/${release.slug}`,
+    },
   };
 }
 

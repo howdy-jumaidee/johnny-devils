@@ -3,6 +3,14 @@ import { CONTACT } from "@/lib/content";
 
 export const metadata = {
   title: "Contact & Booking",
+  description:
+    "Book Johnny Devils for live shows and events. Contact booking agent My Bergman at Jubel — my@jubel.se.",
+  openGraph: {
+    title: "Contact & Booking | Johnny Devils",
+    description:
+      "Book Johnny Devils for live shows and events. Contact booking agent My Bergman at Jubel — my@jubel.se.",
+    url: "https://johnnydevils.com/contact",
+  },
 };
 
 export default function ContactPage() {

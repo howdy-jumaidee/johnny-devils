@@ -44,8 +44,10 @@ const jsonLd = {
   "@context": "https://schema.org",
   "@type": "MusicGroup",
   name: "Johnny Devils",
+  description: "Five-piece outlaw country and rock from Stockholm. Raw blues, burning soul, vintage rock and roll.",
   url: "https://johnnydevils.com",
-  genre: ["Rock", "Country", "Americana"],
+  image: "https://johnnydevils.com/JD_bandphoto.png",
+  genre: ["Rock", "Country", "Americana", "Blues"],
   foundingDate: "2024",
   foundingLocation: {
     "@type": "Place",
@@ -62,6 +64,11 @@ const jsonLd = {
     "@type": "MusicAlbum",
     name: "Ground Rush",
     datePublished: "2024",
+  },
+  contactPoint: {
+    "@type": "ContactPoint",
+    contactType: "booking",
+    email: "my@jubel.se",
   },
   sameAs: [
     "https://open.spotify.com/artist/7KaAcV1L15lnvGm4uY4RYy",

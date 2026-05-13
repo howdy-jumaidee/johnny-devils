@@ -3,6 +3,14 @@ import { MEMBERS, ABOUT } from "@/lib/content";
 
 export const metadata = {
   title: "About the Band",
+  description:
+    "Johnny Devils formed in Stockholm in February 2024 — five musicians driven by country, blues, and 1960s rock. Ground Rush out now.",
+  openGraph: {
+    title: "About | Johnny Devils",
+    description:
+      "Johnny Devils formed in Stockholm in February 2024 — five musicians driven by country, blues, and 1960s rock. Ground Rush out now.",
+    url: "https://johnnydevils.com/about",
+  },
 };
 
 export default function AboutPage() {
