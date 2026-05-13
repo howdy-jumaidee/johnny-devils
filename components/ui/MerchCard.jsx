@@ -56,7 +56,7 @@ export default function MerchCard({ name, image, price, external_url, cta_label,
             className="mt-auto block w-full text-center py-2.5 border border-brand-muted/30 text-brand-muted label-accent text-xs tracking-widest cursor-not-allowed"
             aria-disabled="true"
           >
-            {sold_out ? "Unavailable" : "View Item"}
+            {sold_out ? "Unavailable" : (cta_label ?? "View Item")}
           </span>
         )}
       </div>
