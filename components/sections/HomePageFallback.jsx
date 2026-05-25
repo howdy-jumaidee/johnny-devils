@@ -103,7 +103,7 @@ export default function HomePageFallback() {
               more, a sound rooted in classic songcraft but alive with nerve,
               groove, and darkness.
             </p>
-            <p className="text-brand-black/75 leading-relaxed mb-8">
+            <p className="text-brand-black/75 text-lg leading-relaxed mb-8">
               Their debut album Ground Rush arrived after two years of rehearsals
               and live shows across Stockholm. A band that moves freely between
               rock, country, and Americana, Johnny Devils build their music on
