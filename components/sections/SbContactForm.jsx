@@ -190,7 +190,7 @@ export default function SbContactForm({ blok }) {
 
             <Button
               type="submit"
-              variant="filled"
+              variant="outlined"
               size="lg"
               disabled={status === "loading"}
               className="w-full justify-center"
