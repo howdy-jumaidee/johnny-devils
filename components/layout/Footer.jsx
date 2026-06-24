@@ -1,12 +1,18 @@
+
 "use client";
 
 import { useEffect, useRef } from "react";
+import { usePathname } from "next/navigation";
 
 const BG = "#EDE8DE"; // brand smoke (tan)
+const CREAM = "#F9F8F2"; // brand cream — page content bg on inner pages
 const TICKER_TEXT = "JOHNNY DEVILS · ";
 const SCROLL_SPEED = 140; // px per second (frame-rate independent)
 
 export default function Footer() {
+  // Home ends on a brand-smoke section that already matches the footer, so it
+  // needs no blend. Inner pages end on brand-cream — feather the seam there.
+  const isHome = usePathname() === "/";
   const canvasRef = useRef(null);
   const videoRef = useRef(null);
   const rafRef = useRef(null);
@@ -104,6 +110,21 @@ export default function Footer() {
           className="absolute inset-0 w-full h-full object-cover"
         />
         <canvas ref={canvasRef} className="absolute inset-0 w-full h-full block" />
+
+        {/* Soft top fade so the tan footer emerges from the cream page content
+            instead of meeting it with a hard line. Skipped on home, whose
+            preceding section is already brand-smoke. */}
+        {!isHome && (
+          <div
+            aria-hidden="true"
+            className="absolute inset-x-0 top-0 h-32 pointer-events-none"
+            style={{
+              // Full cream at the very top to meet the page seamlessly, then a
+              // quicker falloff so the wash stays subtle (less bright) lower down.
+              background: `linear-gradient(to bottom, ${CREAM} 0%, rgba(249,248,242,0.45) 30%, rgba(249,248,242,0) 85%)`,
+            }}
+          />
+        )}
       </div>
 
       {/* Bottom strip */}
