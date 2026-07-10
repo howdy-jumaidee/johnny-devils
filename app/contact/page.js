@@ -5,6 +5,7 @@ export const metadata = {
   title: "Contact & Booking",
   description:
     "Book Johnny Devils for live shows and events. Contact booking agent My Bergman at Jubel — my@jubel.se.",
+  alternates: { canonical: "/contact" },
   openGraph: {
     title: "Contact & Booking | Johnny Devils",
     description:

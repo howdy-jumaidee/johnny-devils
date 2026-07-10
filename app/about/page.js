@@ -5,6 +5,7 @@ export const metadata = {
   title: "About the Band",
   description:
     "Johnny Devils formed in Stockholm in February 2024 — five musicians driven by country, blues, and 1960s rock. Ground Rush out now.",
+  alternates: { canonical: "/about" },
   openGraph: {
     title: "About | Johnny Devils",
     description:

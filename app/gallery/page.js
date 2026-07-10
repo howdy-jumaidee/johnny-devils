@@ -5,6 +5,7 @@ export const metadata = {
   title: "Gallery",
   description:
     "Photos from Johnny Devils live shows and recording sessions. Outlaw country and vintage rock from Stockholm.",
+  alternates: { canonical: "/gallery" },
   openGraph: {
     title: "Gallery | Johnny Devils",
     description:

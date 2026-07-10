@@ -1,3 +1,4 @@
+
 import SbTourList from "@/components/sections/SbTourList";
 import { TOUR_DATES } from "@/lib/content";
 
@@ -5,6 +6,7 @@ export const metadata = {
   title: "Shows",
   description:
     "Catch Johnny Devils live in 2026. Upcoming shows in Stockholm, Malmö, Öland, and Gothenburg — full tour schedule.",
+  alternates: { canonical: "/shows" },
   openGraph: {
     title: "Shows | Johnny Devils",
     description:
@@ -15,9 +17,12 @@ export const metadata = {
 
 const eventsJsonLd = TOUR_DATES.map((t) => ({
   "@context": "https://schema.org",
-  "@type": "Event",
+  "@type": "MusicEvent",
   name: `Johnny Devils at ${t.venue}`,
   startDate: t.date,
+  // A sold-out show is still scheduled — only cancelled shows use EventCancelled.
+  eventStatus: "https://schema.org/EventScheduled",
+  eventAttendanceMode: "https://schema.org/OfflineEventAttendanceMode",
   location: {
     "@type": "Place",
     name: t.venue,
@@ -32,16 +37,14 @@ const eventsJsonLd = TOUR_DATES.map((t) => ({
     name: "Johnny Devils",
     url: "https://johnnydevils.com",
   },
-  eventStatus: t.sold_out
-    ? "https://schema.org/EventCancelled"
-    : "https://schema.org/EventScheduled",
-  eventAttendanceMode: "https://schema.org/OfflineEventAttendanceMode",
   ...(t.ticket_url && t.ticket_url !== "#"
     ? {
         offers: {
           "@type": "Offer",
           url: t.ticket_url,
-          availability: "https://schema.org/InStock",
+          availability: t.sold_out
+            ? "https://schema.org/SoldOut"
+            : "https://schema.org/InStock",
         },
       }
     : {}),

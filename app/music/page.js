@@ -5,6 +5,7 @@ export const metadata = {
   title: "Music",
   description:
     "Stream Johnny Devils on Spotify and watch live performances on YouTube. Outlaw country and vintage rock from Stockholm.",
+  alternates: { canonical: "/music" },
   openGraph: {
     title: "Music | Johnny Devils",
     description:

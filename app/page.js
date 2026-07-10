@@ -4,6 +4,7 @@ export const metadata = {
   title: { absolute: "Johnny Devils — Home" },
   description:
     "Five-piece outlaw country and rock from Stockholm. Stream Ground Rush, catch live shows, and grab merch.",
+  alternates: { canonical: "/" },
   openGraph: {
     title: "Johnny Devils — Official Site",
     description:

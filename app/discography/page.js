@@ -5,6 +5,7 @@ export const metadata = {
   title: "Discography",
   description:
     "Browse the full Johnny Devils discography — albums and EPs from their 2024 debut Ground Rush to early recordings.",
+  alternates: { canonical: "/discography" },
   openGraph: {
     title: "Discography | Johnny Devils",
     description:

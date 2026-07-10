@@ -64,6 +64,10 @@ const jsonLd = {
     "@type": "MusicAlbum",
     name: "Ground Rush",
     datePublished: "2024",
+    url: "https://johnnydevils.com/music",
+    image: "https://johnnydevils.com/JD_bandphoto.png",
+    genre: ["Rock", "Country", "Americana", "Blues"],
+    byArtist: { "@type": "MusicGroup", name: "Johnny Devils" },
   },
   contactPoint: {
     "@type": "ContactPoint",

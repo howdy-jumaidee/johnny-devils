@@ -8,22 +8,33 @@ export function generateStaticParams() {
   return RELEASES.map((r) => ({ slug: r.slug }));
 }
 
-export function generateMetadata({ params }) {
-  const release = RELEASES.find((r) => r.slug === params.slug);
+export async function generateMetadata({ params }) {
+  const { slug } = await params;
+  const release = RELEASES.find((r) => r.slug === slug);
   if (!release) return { title: "Release Not Found" };
   return {
     title: release.title,
     description: release.description,
+    alternates: { canonical: `/discography/${release.slug}` },
     openGraph: {
       title: `${release.title} | Johnny Devils`,
       description: release.description,
       url: `https://johnnydevils.com/discography/${release.slug}`,
+      // Falls back to the site-wide band photo until cover art is added.
+      ...(release.cover_image
+        ? {
+            images: [
+              { url: release.cover_image, alt: `${release.title} — cover art` },
+            ],
+          }
+        : {}),
     },
   };
 }
 
-export default function ReleasePage({ params }) {
-  const release = RELEASES.find((r) => r.slug === params.slug);
+export default async function ReleasePage({ params }) {
+  const { slug } = await params;
+  const release = RELEASES.find((r) => r.slug === slug);
   if (!release) notFound();
 
   return (

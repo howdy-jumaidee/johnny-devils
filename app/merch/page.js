@@ -5,6 +5,7 @@ export const metadata = {
   title: "Merch",
   description:
     "Official Johnny Devils merchandise — Ground Rush vinyl, t-shirts, boots, and belt buckles.",
+  alternates: { canonical: "/merch" },
   openGraph: {
     title: "Merch | Johnny Devils",
     description:
