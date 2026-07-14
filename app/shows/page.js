@@ -5,12 +5,12 @@ import { TOUR_DATES } from "@/lib/content";
 export const metadata = {
   title: "Shows",
   description:
-    "Catch Johnny Devils live in 2026. Upcoming shows in Stockholm, Malmö, Öland, and Gothenburg — full tour schedule.",
+    "Catch Johnny Devils live in 2026. Upcoming shows in Stockholm, Skånes-Fagerhult, Örebro, Öland, and Gothenburg — full tour schedule.",
   alternates: { canonical: "/shows" },
   openGraph: {
     title: "Shows | Johnny Devils",
     description:
-      "Catch Johnny Devils live in 2026. Upcoming shows in Stockholm, Malmö, Öland, and Gothenburg — full tour schedule.",
+      "Catch Johnny Devils live in 2026. Upcoming shows in Stockholm, Skånes-Fagerhult, Örebro, Öland, and Gothenburg — full tour schedule.",
     url: "https://johnnydevils.com/shows",
   },
 };
